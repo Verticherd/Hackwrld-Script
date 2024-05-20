@@ -4,16 +4,20 @@ This script automates the management of upgrades and transfers in the Hackworld 
 **Standard Logic (When No Checkboxes Are Active)**
 **Upgrade Logic**
 1.	Priority Order:
+
 •	The script upgrades components in a specific priority order, focusing first on the miner, then the vault, and finally on the scanner and stealer if their upgrade costs are below a certain threshold.
 2.	Conditions for Upgrades:
+
 •	Miner: The script checks if there are enough coins in the vault to cover the cost of a miner upgrade. If so, it initiates the upgrade.
 •	Vault: If the miner upgrade cost is greater than the current vault capacity, the script prioritizes upgrading the vault to handle more coins. This is done to ensure future miner upgrades are feasible.
 •	Scanner and Stealer: These components are upgraded only if their costs are below a calculated transfer threshold (25% of the miner upgrade cost by default).
 
 **Transfer Logic**
 1.	Threshold-Based Transfers:
+
 •	The script transfers coins to the vault based on a threshold, which is calculated as 25% of the miner upgrade cost by default. This ensures that there are always enough coins available for critical upgrades.
 2.	Transfer Conditions:
+
 •	Coins are transferred to the vault if the current coin amount exceeds the transfer threshold, ensuring that resources are efficiently managed and available for upgrades.
 
 
